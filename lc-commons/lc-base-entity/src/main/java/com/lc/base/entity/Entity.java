@@ -1,0 +1,49 @@
+package com.lc.base.entity;
+
+import java.time.LocalDateTime;
+
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.Accessors;
+
+/**
+ * 基础类
+ *
+ * @author lucheng
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain = true)
+@ToString(callSuper = true)
+public class Entity<T> extends SuperEntity<T> {
+
+	private static final long serialVersionUID = 1L;
+
+	public static final String UPDATE_TIME = "updateTime";
+
+	public static final String UPDATE_USER = "updateUser";
+
+	@ApiModelProperty(value = "最后修改时间")
+	@TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
+	protected LocalDateTime updateTime;
+
+	@ApiModelProperty(value = "最后修改人ID")
+	@TableField(value = "update_user", fill = FieldFill.INSERT_UPDATE)
+	protected T updateUser;
+
+	public Entity(T id, LocalDateTime createTime, T createUser, LocalDateTime updateTime, T updateUser) {
+		super(id, createTime, createUser);
+		this.updateTime = updateTime;
+		this.updateUser = updateUser;
+	}
+
+}
