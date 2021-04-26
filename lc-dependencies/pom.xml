@@ -14,7 +14,7 @@
 		<maven.compiler.source>${jdk.version}</maven.compiler.source>
 		<maven.compiler.target>${jdk.version}</maven.compiler.target>
 		<maven.compiler.compilerVersion>${jdk.version}</maven.compiler.compilerVersion>
-		<apache.commons-io.version>2.6</apache.commons-io.version>
+		<apache.commons-io.version>2.7</apache.commons-io.version>
 		<apache.commons-collections4.version>4.4</apache.commons-collections4.version>
 		<druid-spring-boot-starter.version>1.1.21</druid-spring-boot-starter.version>
 		<dozer.version>6.5.0</dozer.version>
