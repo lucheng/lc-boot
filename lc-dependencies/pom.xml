@@ -25,7 +25,7 @@
 		<spring-boot.version>2.2.1.RELEASE</spring-boot.version>
 		<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
 		<mybatis-plus.version>3.1.1</mybatis-plus.version>
-		<mysql.version>8.0.18</mysql.version>
+		<mysql.version>8.0.28</mysql.version>
 		<lombok.version>1.18.10</lombok.version>
 		<guava-bom.version>28.1-jre</guava-bom.version>
 		<swagger-annotations.version>1.6.0</swagger-annotations.version>
